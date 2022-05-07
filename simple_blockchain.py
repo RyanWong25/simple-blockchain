@@ -9,6 +9,7 @@ class Blockchain(object):
 
         self.new_block(previous_hash = "The Times 03/Jan/2009 Chancellor on brink of second bailout for banks.", proof = 100)
 
+    
     def new_block(self, proof, previous_hash = None):
         block = {
             'index': len(self.chain) + 1,
@@ -23,3 +24,17 @@ class Blockchain(object):
         return block
 
     
+    @property
+    def last_block(self):
+        return self.chain[-1]
+
+    
+    def new_transaction(self, sender, receiver, amount):
+        transaction = {
+            'sender': sender,
+            'receiver': receiver,
+            'amount': amount,
+        }
+        self.pending_transactions.append(transaction)
+
+        return self.last_block['index'] + 1
