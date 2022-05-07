@@ -7,7 +7,7 @@ class Blockchain(object):
         self.chain = []
         self.pending_transactions = []
 
-        self.new_block(previous_hash = "The Times 03/Jan/2009 Chancellor on brink of second bailout for banks.", proof = 100)
+        self.new_block(previous_hash = "Genesis Block", proof = 100)
 
     
     def new_block(self, proof, previous_hash = None):
@@ -38,3 +38,13 @@ class Blockchain(object):
         self.pending_transactions.append(transaction)
 
         return self.last_block['index'] + 1
+
+
+    def hash(self, block):
+        stringify = json.dumps(block, sort_keys = True)
+        block_unicode = stringify.encode()
+
+        raw_hash = hashlib.sha256(block_unicode)
+        hex_hash = raw_hash.hexdigest()
+
+        return hex_hash
