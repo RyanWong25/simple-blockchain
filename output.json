@@ -1,0 +1,50 @@
+[
+    {
+        "index": 1,
+        "timestamp": 1651899519.7716117,
+        "transactions": [],
+        "proof": 100,
+        "previous_hash": "Genesis Block"
+    },
+    {
+        "index": 2,
+        "timestamp": 1651899519.7716117,
+        "transactions": [
+            {
+                "sender": "Bob",
+                "receiver": "Sally",
+                "amount": "1 FAKE"
+            },
+            {
+                "sender": "Sally",
+                "receiver": "Bob",
+                "amount": "2 FAKE"
+            }
+        ],
+        "proof": 123,
+        "previous_hash": "7e8caee782468e68643a7a08f492b120c7badc39fa23466299400df8108a9871"
+    },
+    {
+        "index": 3,
+        "timestamp": 1651899519.7716117,
+        "transactions": [
+            {
+                "sender": "Bob",
+                "receiver": "Sam",
+                "amount": "3 FAKE"
+            },
+            {
+                "sender": "Sam",
+                "receiver": "Bill",
+                "amount": "0.5 FAKE"
+            },
+            {
+                "sender": "Bill",
+                "receiver": "Sally",
+                "amount": "1 FAKE"
+            }
+        ],
+        "proof": 456789,
+        "previous_hash": "978a33ff62141c3c6bff321ac8ffbed56329c658296a4420f8e8373dea6cddf3"
+    }
+]
